@@ -1,0 +1,70 @@
+\chapter{Theory}
+This chapter establishes the theoretical foundation for measuring DAO activity levels. We begin by examining the current understanding of DAOs and their operational characteristics. We then develop a framework for analyzing DAO activity based on three core dimensions: monetary, social, and technical indicators. Finally, we present our central hypothesis regarding the effectiveness of multidimensional analysis in predicting DAO activity states.
+
+\section{The Evolution and Nature of DAOs}
+Decentralized Autonomous Organizations represent a novel form of blockchain-based entities governed through smart contracts and managed collectively by token holders (\cite{morrison2020dao}). Unlike traditional centralized organizations, DAOs operate using a flat hierarchy, eliminating intermediary management layers between token holders and executive forces (\cite{axelsen2024you}). This structural innovation offers several advantages, particularly in terms of financial accessibility and operational transparency.
+From a financial perspective, DAOs provide enhanced investment opportunities compared to traditional companies by allowing both, private and institutional investors, to acquire governance tokens, democratizing ownership of the organization (\cite{hashemi2020icos}, \cite{blemus2020initial}). This stands in stark contrast from traditional corporate structures, where public investment access typically requires complex legal procedures and substantial organizational scale (\cite{boot2006entrepreneur}).
+However, this structure also introduces vulnerabilities (\cite{han2025review}). DAOs exhibit high susceptibility to external shocks within the cryptocurrency ecosystem, as demonstrated by several significant events in 2022. The collapse of FTX, previously one of the largest cryptocurrency exchanges globally, triggered a market-wide crisis of confidence when it declared bankruptcy amid allegations of misappropriated customer funds, leading to substantial value deterioration across digital assets (\cite{akyildirim2023understanding}). Similarly, the Terra/Luna crisis, precipitated by the collapse of an algorithmic stablecoin system, resulted in approximately \$45 billion in lost market value and catalyzed a broader market downturn likely affecting DAO treasury valuations (\cite{briola2023anatomy}).
+These systemic vulnerabilities are further compounded by regulatory uncertainties. The legal dispute between Ripple Labs and the U.S. Securities and Exchange Commission (SEC) regarding the classification of XRP tokens as securities exemplifies the regulatory ambiguity facing blockchain-based organizations (\cite{hennelly2022cryptic}). This case highlights how uncertain regulatory frameworks can impact operational viability and organizational stability across the broader DAO ecosystem. These structural characteristics and operational vulnerabilities contribute to significant variance in DAO longevity. As documented by \textcite{alphaquest2024dead}, many initiatives fail to achieve long-term stability, underscoring the importance of robust activity measurement frameworks.
+
+\section{Theoretical Framework for DAO Activity}
+The measurement of DAO activity presents unique challenges that require theoretical consideration. Two competing frameworks have emerged in the literature for conceptualizing DAO operations:
+The Smart Contract Framework, advocated by \textcite{jentzsch2016decentralized} and \textcite{de2018blockchain}, views DAOs primarily as code-driven entities where activity manifests through on-chain interactions. This perspective emphasizes technical metrics and blockchain-verified transactions as primary indicators of organizational vitality.
+In contrast, the Social Coordination Framework, advocated by \textcite{hsieh2018bitcoin}, positions DAOs as community-driven organizations where off-chain coordination plays an equally crucial role. This approach highlights the importance of social engagement and community participation in assessing organizational health.
+Balancing on-chain and off-chain activity indicators within these frameworks is guiding our approach to activity measurement.
+We address this challenge by incorporating elements from both perspectives while recognizing their respective limitations.
+
+
+% Definition "Active"
+Furthermore, organizational activity in the context of DAOs presents distinct challenges from traditional management frameworks. Traditional organizations exist in a binary state - they are either legally active or inactive, with clear differentiation points defined by formal registration and dissolution processes (\cite{CompaniesAct2006}). In contrast, DAOs operate on a continuous spectrum of engagement, where the line between active and inactive states becomes significantly more fluid (\cite{tan2023open}).
+%
+This fundamental difference stems from the decentralized nature of blockchain-based organizations. While a traditional company must formally dissolve to become inactive, a DAO can enter a state of operational dormancy while maintaining its technical existence on the blockchain. This characteristic creates a theoretical challenge in defining and measuring organizational activity.
+%
+To address this challenge, we establish a comprehensive framework for understanding DAO operations. This requires identifying the fundamental characteristics that distinguish active DAOs from dormant ones, and developing metrics that can capture the continuous nature of DAO organizational activity. Therefore, we now turn to examining the core characteristics and components that define operational DAOs.
+
+
+\section{Characteristics and Components of DAOs}
+To establish reliable activity metrics for DAOs, we must first examine their fundamental characteristics. \textcite{rikken2023ins} observe that the sheer variety of DAOs complicates the formulation of a unified definition. However, their analysis of 13 theoretical frameworks reveals three consistently recurring core dimensions. These dimensions provide the foundation for our activity measurement approach.
+
+According to \textcite{buterin2013ethereum}, the first essential characteristic of any Decentralized Autonomous Organization centers on monetary control over a shared pool of funds.
+The reason is twofold. First, it enables the organization to pursue its objectives through resource allocation. Second, it creates scarcity in governance rights through token economics, facilitating organizational management.
+The monetary dimension primarily manifests through the DAO's treasury management and token value dynamics.
+\begin{itemize}
+    \item \textit{Monetary characteristic}: A DAO must maintain control over shared funds and manage token economics.
+\end{itemize}
+
+\noindent The social dimension, as emphasized by \textcite{hassan2021decentralized}, encompasses both internal coordination and external engagement. 
+Internally, DAOs require active member participation through the creation and voting of proposals. 
+Externally, they must cultivate broader community engagement to ensure long-term sustainability. 
+This aligns with established organizational theory linking growth to sustainable operations \textcite{butler2007organizational}.
+\begin{itemize}
+    \item \textit{Social characteristic}: A DAO must foster both internal participation and external community growth.
+\end{itemize}
+
+\noindent The technical dimension, as highlighted by \textcite{dupont2017experiments}, requires DAOs to maintain codified governance structures. 
+These are typically implemented through blockchain-based smart contracts (\cite{bellavitis2023rise}). 
+This characteristic necessitates ongoing technical development to adapt governance mechanisms to evolving organizational needs.
+The maintenance and development of these technical systems serves as another metric for measuring DAO activity.
+\begin{itemize}
+    \item \textit{Technical characteristic}: A DAO must maintain its blockchain-based governance infrastructure.
+\end{itemize}
+
+These three dimensions - monetary, social, and technical - represent complementary aspects of DAO operations. Each dimension captures unique signals about organizational vitality:
+The monetary dimension reflects market confidence and resource availability, though it can be influenced by broader market conditions unrelated to organizational health (\cite{richard2009measuring}). Social metrics indicate community engagement and growth potential but may fluctuate based on industry trends. Technical indicators, particularly development activity, demonstrate operational progress and adaptation capabilities, though they do not capture market validation or community health.
+
+\section{Hypothesis Development}
+The interplay of monetary, social, and technical aspects of DAO operations is fundamental to our approach to activity measurement. We propose that effective activity assessment requires analyzing multiple complementary signals for three key reasons.
+First, each dimension provides non-redundant information about organizational health.
+Second, multiple indicators provide resilience against environmental shocks. Single metrics can be distorted by external factors like price manipulation, social media trends, or temporary development pauses. A multidimensional approach helps distinguish between genuine organizational changes and temporary disruptions.
+Third, different metrics gain or lose relevance across organizational lifecycle stages. Early-stage DAOs might show intense development activity and growing social presence despite limited price action. Mature organizations typically display more balanced indicators across all dimensions. Decline phases often manifest through decreasing engagement across multiple metrics simultaneously  (\cite{lester2003organizational}).
+These considerations therefore lead to our central hypothesis:
+\begin{enumerate}
+    \item A Long Short-Term Memory (LSTM) model incorporating token price, social media engagement, and development activity metrics will demonstrate superior predictive performance in classifying DAO activity states compared to single-metric heuristics, as evidenced by non-overlapping 95\% confidence intervals in PR-AUC scores, calculated through bootstrapped AUCs with 1000 resamples.
+\end{enumerate}
+\noindent This hypothesis reflects our theoretical expectation that combining complementary activity signals will provide more reliable classification than any single-dimension heuristic.
+
+
+
+
+
+In this chapter, we developed the theoretical foundation for measuring DAO activity levels. We first explored the unique characteristics of DAOs that differentiate them from traditional organizations, particularly their susceptibility to external shocks and regulatory uncertainties. We then examined competing frameworks for conceptualizing DAO operations, highlighting the tension between smart contract and social coordination perspectives. Building on established DAO literature, we identified three core dimensions - monetary, social, and technical - that form the basis for activity measurement. This theoretical framework led to our central hypothesis that multidimensional analysis will provide superior activity classification compared to single-metric approaches. The following chapter details our methodological approach to testing this hypothesis through empirical analysis of DAO activity patterns.

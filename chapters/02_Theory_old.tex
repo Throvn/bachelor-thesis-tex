@@ -1,0 +1,123 @@
+\chapter{Theory}
+To provide a sound theoretical framework in which the research question is based, the following chapter will introduce the current state of DAOs, their limitations, showing why researching DAOs is of importance, and subsequently show how this thesis can contribute towards simplifying research.
+
+\section{The Evolution and Nature of DAOs}
+Decentralized Autonomous Organizations are blockchain-based entities governed by smart contracts and managed collectively by token holders.
+Compared to traditional centralized organizations, a central difference is the management architecture.
+DAOs operate using a flat hierarchy, cutting out levels of middle management between token holders and executive forces (\cite{axelsen2024you}).
+According to \textcite{cristini2003flat}, flat hierarchies are required for organizations in order to be productive, making DAOs a serious contender compared to other centralized organizational architectures. 
+Financially, DAOs offer a superior alternative to traditional companies for investors as they allow both private and institutional investors to buy a part of the organization by acquiring governance tokens of the entity (\cite{hashemi2020icos}, \cite{blemus2020initial}).
+For traditional organizations, selling shares on a stock exchange is only allowed if the company is publicly listed.
+Few companies ever achieve this, missing out on the buying power of smaller investors.
+While selling shares before going public is possible, it is legally complex and therefore not a viable way to raise capital from a pool of investors (\cite{boot2006entrepreneur}).
+Furthermore, DAOs eliminate the need for traditional intermediaries like banks or fund managers.
+Cutting out the middleman further helps to reduce costs (\cite{ofir2020ico}).
+On the other hand, it is also important to highlight that not all traits of a DAO are advantageous.
+DAOs are highly susceptible to external shocks, such as the collapse of major entities like FTX or Terra/Luna, due to their strong dependency on governance tokens (\cite{axelsen2024you}). 
+FTX was a cryptocurrency exchange and trading platform founded in 2019 by Sam Bankman-Fried, which rapidly became one of the largest in the industry. It filed for bankruptcy in November 2022 following allegations of mismanagement, fraud, and the misuse of customer funds, leading to significant losses for users and investors (\cite{akyildirim2023understanding}). Terra/Luna was a dual-token cryptocurrency system designed to maintain the stability of the TerraUSD (UST) stablecoin through an algorithmic relationship between TerraUSD and its sister token, Luna.
+In May 2022, the system collapsed when UST lost its peg to the US dollar, leading to a dramatic crash in Luna's value and wiping out billions in market capitalization (\cite{briola2023anatomy}).
+The high susceptibility to external shocks in the crypto ecosystem has multiple reasons: Firstly, DAOs rely on the underlying blockchain infrastructure on which they are deployed.
+For instance, if the underlying blockchain suffers a critical security flaw leading to diminished trust, all DAOs operating on that platform would experience a decrease in value, often resulting in financial losses.
+Additionally, a DAO’s treasury is typically diversified across various cryptocurrencies to mitigate risks. DAOs usually invest in stablecoins, as well as other projects and protocols within the crypto ecosystem.
+If the assets held in the treasury depreciate, the overall value of the DAO is adversely affected.
+Secondly, regulatory uncertainties can impact DAOs unexpectedly (\cite{gudkov2017legal}).
+For example, the Web3 project Ripple experienced a significant price drop when the Securities and Exchange Commission (SEC) ruled that their product should be considered a security.
+Such regulatory actions can have unforeseen and severe consequences for DAOs, highlighting the multifaceted challenges they face in the current financial and regulatory landscape (\cite{hennelly2022cryptic}).
+%
+Because of the aforementioned reasons, many projects fail to achieve long-term stability, as highlighted by \textcite{alphaquest2024dead}, which documents numerous abandoned initiatives. These issues underscore the volatility inherent in the DAO ecosystem.
+
+\section{Characteristics and Components of DAOs}
+
+In order to effectively rank DAOs based on activity, we first need to look at the technical definition of a DAO. 
+\textcite{rikken2023ins} came to the conclusion that real-world DAOs are too complex to construct a practical, unified definition. However, by conducting a literature review of 13 definitions, they were still able to break down common denominators. In the following, we focus on the three most important core characteristics which literature could agree on. This serves as the foundation for deriving the inputs of our decision-making models.
+
+According to \textcite{buterin2013ethereum}, the first fundamental characteristic of any Decentralized Autonomous Organization is its control over a pool of funds. 
+While the specifics of fund management, such as who can access the funds and what types of assets are held, may vary, the basis of a DAO is that the community needs to govern the funds. 
+The reason is twofold. First, it ensures that the organization has resources which it can use to fulfill its greater purpose\footnote{\href{https://dictionary.cambridge.org/dictionary/english/organization}{https://dictionary.cambridge.org/dictionary/english/organization}}. Second, enabling an exchange of funds against voting rights creates a scarcity of voting tokens, enabling simpler organization of the DAO.
+\begin{itemize}
+    \item \textit{Monetary characteristic}: A DAO needs to have a storage of value.
+\end{itemize}
+
+\noindent Furthermore, \textcite{hassan2021decentralized} emphasize the importance of active participation within a DAO. 
+Members of the organization are responsible for creating proposals and contributing to the overall decision-making process by voting. 
+Alongside the proposal and voting mechanisms, DAOs incorporate a social dimension, as members must engage in discussions to make informed choices. 
+At the same time, DAOs need to build relationships beyond their own members. 
+Appealing to a broader audience is essential, as growth is not only a measure of success in organizational theory but also a strategy for ensuring long-term viability (\cite{butlerorganizational}).
+\begin{itemize}
+    \item \textit{Social characteristic}: A DAO needs to have a community.
+\end{itemize}
+
+According to \textcite{dupont2017experiments}, a DAO, in addition to the aforementioned criteria, is required to have its governance roles codified. 
+In practice, codified rules are mostly deployed on a blockchain in the form of a smart contract. 
+Since the governance roles are subject to the purpose of the DAO, they need to be developed by its members. 
+This requires development time, which translates to another indicator to measure the DAO activity level.
+\begin{itemize}
+    \item \textit{Technical characteristic}: A DAO needs to be deployed and maintained on a blockchain.
+\end{itemize}
+
+All of the three categories can be found in every DAO definition examined by \textcite{rikken2023ins}. 
+At the same time, these categories represent the maximum overlap among all definitions. 
+
+This leads us to believe that in order to predict the activity level of a DAO, it is insufficient to rely on simple heuristics which take only one of these areas into account.
+\begin{itemize}
+    \item \textbf{Central Hypothesis}: Utilizing multidimensional inputs such as token price trends, social media engagement, and development activity achieves significantly higher Precision-Recall Area Under the Curve (PR-AUC) compared to heuristic approaches, as evidenced by non-overlapping 95\% confidence intervals for the metric, calculated using bootstrapped AUCs with 1000 resamples.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Although DAOs have gained significant traction in recent years, research on DAOs stays in its infancy.
+Most research regarding DAOs can only be found in "gray literature" -- literature like blogs, websites, or technical articles -- rather than peer-reviewed papers (\cite{faqir2021comparative}).
+This information distribution makes it therefore much harder for researchers to keep an overview of the current developments.
+Regardless, \textcite{tan2023open} managed to identify several research gaps related to DAO platforms. 
+
+No comprehensive study has yet been conducted to determine the actual number of DAOs (\cite{tan2023open}).
+Academia and gray literature, such as online reports by Ernst \& Young and the Harvard Law School forum, have approached this cautiously, relying solely on aggregation platforms (\cite{ey2023legalComplexity}; \cite{gail2022aprimerondaos}).
+The most cited of these platforms is DeepDAO, which claims to have aggregated approximately 50,000 DAOs.
+However, it could enrich data for only 2,500 of them, leaving many either unexamined or insignificant.
+Other platforms present different figures. DAO Analyzer, a project focused on identifying DAOs through on-chain activity, reported finding 6,000 DAOs by analyzing frameworks like DAOhaus, Aragon, and Moloch (\cite{arroyo2022dao}).
+Meanwhile, DAOBase, which describes itself as the largest DAO aggregator, advertises an impressive 106,000 DAOs on its homepage.
+These varying estimates, none of which are backed by academic rigor, show the remaining discrepancies in DAO numbers across sources.
+A key issue lies in the inability to determine how many of these DAOs are inactive or abandoned, as the immutable nature of blockchain technology prevents their removal. Assessing the activity levels of DAOs is essential for gaining a clearer understanding of their operational relevance, distinguishing active and impactful organizations from those that are effectively defunct, and addressing the uncertainties created by these divergent estimations.
+
+Another identified research gap is a lack of analysis on the longevity and long-term stability of these platforms.
+To date, still no studies have specifically addressed the topic.
+This is concerning, as whenever conducting an empirical study involving DAOs, the question of impermanence needs to be answered. 
+\textcite{monteiro2024exploring}, for example, analyzed 179 DAOs to deduce trends toward off-chain governance.
+Although this dataset is substantial, it is unclear whether it accurately depicts the entire population.
+Similarly, \textcite{hsieh2024decentralized} analyzed 45 DAOs to compare the difference in innovation between collective and private governance, again potentially missing a fuller picture.
+The authors claim that focusing on the most active DAOs offers a reliable snapshot of the broader population, though this remains unproven. 
+While the body of research is generally growing, most studies continue to focus on subcategories and instead of answering this fundamental question,
+\textcite{liu2021technology} found out that existing studies mainly focus on security issues, DAO applications, and governance challenges.
+Still, these areas require robust empirical data for meaningful results, yet many fail to explain their selection criteria or do not mention it altogether.
+Hence, there remains a noticeable gap in studies focusing on DAO activity levels.
+It is worth pointing out that information on DAOs is hard to gather due to the broad definitions and many shapes a DAO can take on. One project which made advancements in the aggregation of information on DAOs is DAO Analyzer.
+DAO Analyzer has made significant efforts to aggregate DAOs by indexing information from multiple blockchains, including Gnosis Chain, Ethereum, and Arbitrum (\cite{arroyo2022dao}).
+While valuable, their work did not focus on DAO activity, instead aiming to inspire future research by providing tools rather than conclusive findings.
+The closest attempt to fill the current research gap was made 
+by \textcite{Lee_2024} at CoinGecko, who emphasised the fact that abandonment of DAOs is a common issue in the blockchain space.
+Published early 2024, the article reveals that over 50\% of all coins -- tracked by CoinGecko -- launched 
+have failed, with abandonment cited as a leading cause.
+Many of these projects, particularly from the 2020 - 2021 bull market, failed due to the ease of launching tokens and the popularity of Memecoins. 
+Unfortunately, their classification procedure is in-transparent and vague, mentioning: "CoinGecko standards" or "verifiable sources."
+Our paper could help CoinGecko to employ more robust metrics to benchmark existing and new DAO projects and compare them regarding their level of activity. This extra metric would be a good indicator for the trustworthiness of a project.
+
+This chapter has looked at the current landscape of DAOs. It introduced the differences and similarities between traditional organizations and showed the research gap this thesis is exploring. We found out that determining the activity level of a DAO can help advance DAO research by helping to fact-check current results and ease the dataset creation for future studies.
+While this chapter already explained DAOs on a higher level, the next chapter will introduce tangible characteristics every DAO needs to possess. As well as the central hypothesis of this thesis will be introduced.

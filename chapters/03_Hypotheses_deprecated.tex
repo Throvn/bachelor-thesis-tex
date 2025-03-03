@@ -1,0 +1,41 @@
+\chapter{Hypotheses}
+This Chapter lays the groundwork for constructing an LSTM model by providing a tangible definition of a DAO. Based on this definition, we define our central hypothesis.
+
+In order to effectively rank DAOs based on activity, we first need to look at the technical definition of a DAO. 
+\textcite{rikken2023ins} came to the conclusion that real-world DAOs are too complex to construct a practical, unified definition. However, by conducting a literature review of 13 definitions, they were still able to break down common denominators. In the following, we focus on the three most important core characteristics which literature could agree on. This serves as the foundation for deriving the inputs of our decision-making models.
+
+According to \textcite{buterin2013ethereum}, the first fundamental characteristic of any Decentralized Autonomous Organization is its control over a pool of funds. 
+While the specifics of fund management, such as who can access the funds and what types of assets are held, may vary, the basis of a DAO is that the community needs to govern the funds. 
+The reason is twofold. First, it ensures that the organization has resources which it can use to fulfill its greater purpose\footnote{\href{https://dictionary.cambridge.org/dictionary/english/organization}{https://dictionary.cambridge.org/dictionary/english/organization}}. Second, enabling an exchange of funds against voting rights creates a scarcity of voting tokens, enabling simpler organization of the DAO.
+\begin{itemize}
+    \item \textit{Monetary characteristic}: A DAO needs to have a storage of value.
+\end{itemize}
+
+\noindent Furthermore, \textcite{hassan2021decentralized} emphasize the importance of active participation within a DAO. 
+Members of the organization are responsible for creating proposals and contributing to the overall decision-making process by voting. 
+Alongside the proposal and voting mechanisms, DAOs incorporate a social dimension, as members must engage in discussions to make informed choices. 
+At the same time, DAOs need to build relationships beyond their own members. 
+Appealing to a broader audience is essential, as growth is not only a measure of success in organizational theory but also a strategy for ensuring long-term viability (\cite{butlerorganizational}).
+\begin{itemize}
+    \item \textit{Social characteristic}: A DAO needs to have a community.
+\end{itemize}
+
+According to \textcite{dupont2017experiments}, a DAO, in addition to the aforementioned criteria, is required to have its governance roles codified. 
+In practice, codified rules are mostly deployed on a blockchain in the form of a smart contract. 
+Since the governance roles are subject to the purpose of the DAO, they need to be developed by its members. 
+This requires development time, which translates to another indicator to measure the DAO activity level.
+\begin{itemize}
+    \item \textit{Technical characteristic}: A DAO needs to be deployed and maintained on a blockchain.
+\end{itemize}
+
+All of the three categories can be found in every DAO definition examined by \textcite{rikken2023ins}. 
+At the same time, these categories represent the maximum overlap among all definitions. 
+This leads us to believe that in order to predict the activity level of a DAO, it is insufficient to rely on simple heuristics which take only one of these areas into account.
+\begin{itemize}
+    \item \textbf{Central Hypothesis}: Utilizing multidimensional inputs such as token price trends, social media engagement, and development activity achieves significantly higher Precision-Recall Area Under the Curve (PR-AUC) compared to heuristic approaches, as evidenced by non-overlapping 95\% confidence intervals for the metric, calculated using bootstrapped AUCs with 1000 resamples.
+\end{itemize}
+
+\noindent This Chapter introduced three important characteristics of every DAO. 
+This was needed to choose the right inputs for our activity level model. 
+Additionally, a central hypothesis was derived. 
+The next chapter will take a detailed look at the methods and feature descriptions used to investigate our central hypothesis.

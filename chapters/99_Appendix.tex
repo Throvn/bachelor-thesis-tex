@@ -1,0 +1,124 @@
+\chapter{Appendix}
+
+
+\begin{figure}[h!]
+    \begin{lstlisting}[language=JSON]
+    [{
+    	"slug": "string",
+    	"priceUSD": [{
+    		"datetime": "string",
+    		"value": number
+    	}, {...}, ...],
+    	"devActivity": null | [{
+    		"datetime": "string",
+    		"value": number
+    	}, {...}, ...],
+    	"twitterFollowers: null | [{
+    		"datetime": "string",
+    		"value": number
+    	}, {...}, ...],
+    	"isActive": [1,1,...,0,0,...]
+    }, {...}, ...]
+    \end{lstlisting}
+
+    \caption{JSON schema of the dataset.}
+    {\texttt{isActive} always has the same length as \texttt{priceUSD} and both indices always refer to the same \texttt{datetime}.}
+    \label{fig:dataset_schema}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{Comparison of Unidirectional Model Performance for Different \(\alpha\) and \(\gamma\) Values.}
+    \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{llcccc}
+            \toprule
+            \textbf{Model (\(\alpha, \gamma\))} & \textbf{Classes} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Accuracy} \\
+            \midrule
+            \multirow{2}{*}{\(\alpha = 0.50, \gamma = 1\)} & Abandoned  & 0.77 & 0.60 & 0.68 & \multirow{2}{*}{0.66} \\ 
+                                                        & Operating  & 0.56 & 0.74 & 0.63 &                     \\
+            \midrule
+            \multirow{2}{*}{\(\alpha = 0.71, \gamma = 2\)} & Abandoned  & 0.79 & 0.72 & 0.75 & \multirow{2}{*}{0.71} \\ 
+                                                           & Operating  & 0.63 & 0.71 & 0.67 &                     \\
+            \midrule
+            \multirow{2}{*}{\(\alpha = 0.71, \gamma = 3\)} & Abandoned  & 0.75 & 0.78 & 0.76 & \multirow{2}{*}{0.71} \\ 
+                                                           & Operating  & 0.65 & 0.61 & 0.63 &                     \\
+            % \midrule
+            % \multirow{2}{*}{\(\alpha = 0.71, \gamma = 3.5\)} & Abandoned  & 0.77 & 0.78 & 0.77 & \multirow{2}{*}{0.73} \\ 
+            %                                                   & Operating  & 0.66 & 0.64 & 0.65 &                     \\
+            \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+    \label{tab:alpha_gamma_comparison}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcccc}
+\hline
+    & Precision & Recall & F1-Score & Support \\
+\hline
+Abandoned & 0.73 & 0.54 & 0.62 & 101 \\
+Operating & 0.58 & 0.76 & 0.66 & 84 \\
+\hline
+Accuracy & & & 0.64 & 185 \\
+Macro Avg & 0.66 & 0.65 & 0.64 & 185 \\
+Weighted Avg & 0.66 & 0.64 & 0.64 & 185 \\
+\hline
+\end{tabular}
+\caption{Classification Report for Twitter Follower Heuristic.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lcccc}
+    \hline
+        & Precision & Recall & F1-Score & Support \\
+    \hline
+    Abandoned & 0.67 & 0.93 & 0.78 & 159 \\
+    Operating & 0.76 & 0.32 & 0.45 & 107 \\
+    \hline
+    Accuracy & & & 0.68 & 266 \\
+    Macro Avg & 0.71 & 0.62 & 0.61 & 266 \\
+    Weighted Avg & 0.70 & 0.68 & 0.65 & 266 \\
+    \hline
+    \end{tabular}
+    \caption{Classification Report for Price Heuristic.}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcccc}
+\hline
+    & Precision & Recall & F1-Score & Support \\
+\hline
+Abandoned & 0.70 & 0.81 & 0.75 & 77 \\
+Operating & 0.77 & 0.66 & 0.71 & 77 \\
+\hline
+Accuracy & & & 0.73 & 154 \\
+Macro Avg & 0.74 & 0.73 & 0.73 & 154 \\
+Weighted Avg & 0.74 & 0.73 & 0.73 & 154 \\
+\hline
+\end{tabular}
+\caption{Classification Report for Dev Activity Heuristic.}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcccc}
+\hline
+    & Precision & Recall & F1-Score & Support \\
+\hline
+Abandoned & 0.77 & 0.83 & 0.80 & 159 \\
+Operating & 0.71 & 0.63 & 0.67 & 107 \\
+\hline
+Accuracy & & & 0.75 & 266 \\
+Macro Avg & 0.74 & 0.73 & 0.73 & 266 \\
+Weighted Avg & 0.75 & 0.75 & 0.74 & 266 \\
+\hline
+\end{tabular}
+\caption{Classification Report for LSTM model.}
+\label{tab:lstm_res}
+\end{table}
+
+\newpage
+\hspace{100pt}

@@ -1,0 +1,30 @@
+\chapter[Introduction]{When are DAOs Dead? An Empirical Model for Determining the Activity of a Decentralized Autonomous Organization}
+
+Ever since \textcite{buterin2013ethereum} introduced the concept of Decentralized Autonomous Organizations (DAOs) in the Ethereum whitepaper, countless organizations have been created.
+A DAO can be best described as a digital organization centered around fixed, codified rules using blockchain technology (\cite{el2020overview}).
+Decisions are made collectively by its members, who typically use token-based voting to propose and vote on actions.
+%
+Unlike traditional organizations, DAOs often operate similarly to corporations but are missing legal recognition (\cite{wright2015decentralized}).
+This can be seen as a double-edged sword, as the creation of these low-barrier-to-entry organizations allows them to form quickly but, as a side effect, leaves many abandoned after a short period of time (\cite{alphaquest2024dead}).
+Even though research on DAOs has started to increase, academia still faces significant challenges due to this side effect.
+Firstly, not being able to distinguish between active and inactive organizations at scale introduces the lack of a standardized method for selecting representative datasets.
+For example, after manual classification, researchers from Alphaquest found out that their dataset includes approximately two-thirds of inactive DAOs (\cite{alphaquest2024dead}).
+This pollution could make it difficult to identify trends in governance, participation, or funding.
+As a consequence, it is nearly impossible to establish a common baseline for the quality of datasets regarding DAO research, making comparisons between studies tedious.
+Secondly, the steady turnover and ever-changing landscape of the web3 ecosystem makes it hard to determine whether a chosen dataset size is sufficient to gain meaningful results.
+As of today, the DAO ecosystem remains opaque, without clear ways to distinguish between active and inactive DAOs.
+Studies cherry-pick data without disclosing criteria, potentially leading to skewed and less generalizable conclusions (\cite{faqir2021comparative}; \cite{monteiro2024exploring}).
+Existing methods for selecting an appropriate dataset often seem to rely on heuristics aligned with the specific focus of the research. For instance, when a study focuses on the tokenomics of Decentralized Autonomous Organizations, researchers might select and rank DAOs solely based on tokenomics-related criteria, like the size of the Initial Coin Offering. This approach overlooks other vital dimensions that are essential for a DAO's overall operation.
+This gap in data heuristics calls for advanced classification methods that expand academic rigor.
+
+To tackle these challenges, we propose using a machine learning model, specifically Long Short-Term Memory (LSTM) networks, to classify DAOs as "active" or "inactive." By taking into account financial, social, and developmental indicators, we aim to paint a fuller picture of DAO activity than what is typically seen in current research. LSTMs are well-suited for this kind of task because they can capture patterns over time, allowing us to look at data like Twitter followers, price changes, and development activity. The goal is to move beyond the common reliance on single inputs like financial metrics or social signals, which often don’t tell the whole story. This model offers a way to identify active DAOs, and in doing so, helps clean up the datasets used for research, making it easier to compare and analyze findings across studies. The hope is that by providing a more accurate and standardized method, this thesis can shed light on DAO activity in a way that has been hard to achieve so far.
+
+The current introduction is followed by a chapter covering the necessary theory of our research, exploring the status quo of academia, and highlighting current issues and gaps in the literature. Afterwards, in Chapter 3, we deduce necessary hypotheses for our experiment and finally create our thesis hypothesis.
+%
+In Chapter 4, we benchmark a set of heuristics that could replicate employed dataset filters in existing research, assessing their effectiveness in capturing a representative sample of active DAOs. We develop a Long Short-Term Memory (LSTM) model with multidimensional input to analyze current methodologies, determining whether traditional approaches are justified or if more advanced techniques are necessary to accurately estimate the true number of operating DAOs.
+%
+Chapter 5 presents the results. We find that compared to simple single-input heuristics, the LSTM outperforms on almost all metrics.
+%
+Chapter 6 discusses the theoretical and practical implications of the results. It is also suggested that simpler, targeted metrics may be sufficiently effective compared to complex models.
+%
+We conclude our findings in Chapter 7, provide an outlook for future research, and address limitations of our study.

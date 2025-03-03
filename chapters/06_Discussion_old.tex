@@ -1,0 +1,56 @@
+\chapter{Discussion}
+
+The last chapter showed that the LSTM model was one of the best prediction algorithms for activity prediction.
+However, it failed to amass a clear advantage compared to the Development Activity Heuristic and the hypothesis that a multidimensional model would signifcantly outperform heuristic approaches was rejected.
+We also managed to show that the LSTM model in-fact identified patterns instead of random guessing by not only slightly outperforming the Development Activity Heuristic but also an improved precision recall curve compared to the Majority Class Prediction.
+
+This thesis addresses a key issue in the existing literature: the definition of "activity" in DAOs. Many studies define activity using simple metrics like voting frequency or the number of proposals created. However, these measures do not reflect the actual level of activity within a DAO. For example, proposals can be created without any meaningful follow-up, especially in systems where off-chain voting is not enforced. A more accurate measure of activity should include sustained engagement and operational outcomes, such as regular contributions, growth in active members, and completed projects. A DAO that reduces its team size significantly or loses functionality due to hacking cannot be considered truly active, even if it meets basic participation metrics. This perspective offers a more accurate way to assess DAO activity.
+All in all, we identified that currently employed heuristics for data gathering may be justified, depending on the focus of the paper employing the strategy. 
+
+The common reliance on financial or social metrics in prior studies (\cite{Lee_2024}; \cite{faqir2021comparative}; \cite{monteiro2024exploring}) turns out to be the worst indicator for DAO activity. 
+Our finding also further enhances the work of \textcite{arroyo2022dao}, who already stressed the importance of tracking DAO participation but lacked a focus on activity metrics. 
+We also expand on \textcite{liu2021technology} by empirically assessing the effectiveness of different activity metrics and demonstrating that development activity is a more reliable indicator of DAO sustainability compared to financial or social metrics. 
+Henceforth, information aggregators such as DeepDao, CoinGecko, and Santiment should consider prioritizing development activity metrics on their platforms.
+Currently, DeepDao solely focuses on financial and social metrics, neglecting development activity entirely.
+Furthermore, CoinGecko tracks development contributions but does not make this data readily available to end users of their mobile applications or website, limiting its practical utility. 
+Santiment’s "Ecosystem Development Activity Dashboard" is a step forward, but lacks sufficient detail by only focusing on entire chain ecosystems. Meaning, it does not allow users to assess individual project activity.
+Enhancing the visibility of development metrics on these aggregators would provide insights for potential investors and future members, leading to more informed decision-making.
+In the context of new DAO launches, development metrics could serve as an early and reliable indicator of project sustainability, mitigating the over-reliance on financial metrics like upfront valuations.
+
+We urge future studies to expand our research by exploring additional activity-based indicators or their potential correlations with DAO longevity.
+Broadening the range of metrics beyond development activity could uncover new insights into DAO sustainability, offering a clearer picture of the factors that drive their long-term success.
+Research on additional inputs will also likely be able to increase the accuracy, reduce type one and two errors, and leads to smaller confidence intervals, making the LSTM a clear leader in DAO activity level prediction.
+Additionally, alternative approaches like a different LSTM architecture or Recurrent Neural Network architectures can be employed to check if better results can be achieved.
+Alternatively, a deeper exploration of hybrid models that integrate RNN approaches with heuristic methods could yield better results.
+With further refinements, the LSTM model could be used as a practical application by DAO managers. For instance, DAOs experiencing challenges with member inactivity could leverage LSTM models to predict future participation levels by analyzing past activity patterns. This would enable DAO managers to implement targeted interventions, such as incentivizing contributions or launching engagement campaigns, to sustain participation. By shifting focus from traditional financial or social metrics to development activity indicators, DAOs can adopt a more proactive approach to managing community involvement. The integration of LSTM models into existing DAO management tools could provide real-time insights, offering a competitive edge in maintaining active and thriving ecosystems.
+One limitation of this study is that it relies on a single data source, Santiment. While using Santiment made it easier to compare DAOs since the data was already formatted consistently, it could have unintentionally introduced bias. The results might be influenced by Santiment's data collection processes, which could limit how applicable the findings are compared to other datasets or platforms. Future research should explore whether this reliance on one source has skewed the results and consider including data from multiple sources to provide a more balanced view of DAO activity levels.
+Lastly, while this study aimed to capture the key aspects of DAO activity, there is room to explore additional metrics that could provide a more comprehensive understanding.
+A promising direction would be to pair DAOs with their corresponding Snapshot spaces and analyze proposal frequency and outcomes.
+These metrics could offer more insight into governance activity and decision-making processes within DAOs.
+Incorporating such data into the LSTM model might enhance its ability to predict activity levels and sustainability.
+Moreover, the dataset used in this study, while effective for our purposes, is limited in scope. Expanding to larger and more diverse datasets would allow future research to test whether the findings hold true across DAOs with varying structures and objectives. This broader approach could also help refine the model’s adaptability to different environments, ensuring its applicability to the growing and evolving DAO ecosystem.
+
+
+Expanding the dataset size is a crucial step for future research, and this could be achieved by developing a more complex adaptor capable of gathering data from multiple sources such as CoinGecko, Twitter, and GitHub directly. Development activity, while a valuable metric, is particularly challenging to collect consistently due to the decentralized and fragmented nature of data sources. Moreover, the varying test dataset sizes used for the heuristic approaches in this study highlight the need for a predictive model, like an LSTM, that can effectively handle missing or incomplete data. Researching LSTM models designed to manage such data gaps would provide more robust insights into DAO activity.
+
+
+By focusing exclusively on DAOs, this study limited its scope to a smaller dataset, which may constrain the generalizability of its findings. The same approach could be applied to a broader spectrum of crypto and Web3 projects, as the underlying governance structure is less critical for assessing engagement and sustainability. Insights from this research would likely extend to Web3 projects in general, broadening the relevance and applicability of the model. Future studies should explore these broader applications while refining the definition and measurement of true activity.
+
+
+
+
+
+
+
+
+
+This study allowed for first insights into DAO activity levels. While being the first of it's kind, it showed that it has its place by being able to help with some of the significant challenges DAOs face of today.
+
+While traditional organizations have been researched for quite some time, DAOs haven't. The metric of activity of an organization does not need to be researched for traditional ones, because of the legal requirements, which keeps all official organizations active. Therefore, for this new way of governance the problem of organizational activity has been overlooked until now.
+
+Attack vectors which arise through the inactivity of DAOs can also be better seen and warned before the actual attack happens thanks to our research bringing attention to this. For example, an almost inactive DAO can be more sucsseptible towards hostile takeovers as members won't monitor the activity too closely. With our tool, we can put these DAOs under extra focus, making attacks of this kind harder.
+
+Our research also enables researchers to better investigate the fallout of shocks in the crypto ecosystem, by emperically analyzing the effects of certain external shocks. E.g. How many DAOs were abandoned after the Terra/Luna crash because their assets were whiped out.
+
+Having a quick way to analyse the activity levels of DAOs can also enable deeper research for subcategories of the web3 ecosystem, analyzing opportunities in categories. E.g. by examining the activity levels of all DeFi DAOs and comparing them with all GameFi DAOs one can compare if the field of GameFi or DeFi is emerging.
+
